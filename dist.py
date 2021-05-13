@@ -36,11 +36,11 @@ def poisson_dist(k, mean):
     answers = df.iloc[int(k - 1)]
     streamlit.write(f"P(X = {answers[0]}) is {answers[1]}")
     streamlit.write(f"P(X <= {answers[0]}) is {answers[2]}")
-    streamlit.write(f"P(X >= {answers[0]}) is {answers[3]}")
+    streamlit.write(f"P(X > {answers[0]}) is {answers[3]}")
 
     fig = make_subplots(
         rows=3, cols=1,
-        subplot_titles=("Probability of X = K", "Probability of X <= K", "Probability of X >= K"))
+        subplot_titles=("Probability of X = K", "Probability of X <= K", "Probability of X > K"))
 
 
     # fig = go.Figure()
@@ -74,11 +74,11 @@ def geom_dist(p, k):
     answers = df.iloc[int(k - 1)]
     streamlit.write(f"P(G = {answers[0]}) is {answers[1]}")
     streamlit.write(f"P(G <= {answers[0]}) is {answers[2]}")
-    streamlit.write(f"P(G >= {answers[0]}) is {answers[3]}")
+    streamlit.write(f"P(G > {answers[0]}) is {answers[3]}")
 
     fig = make_subplots(
         rows=3, cols=1,
-        subplot_titles=("Probability of G = K", "Probability of G <= K", "Probability of X >= K"))
+        subplot_titles=("Probability of G = K", "Probability of G <= K", "Probability of G > K"))
 
 
     # fig = go.Figure()
