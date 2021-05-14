@@ -143,14 +143,14 @@ if distributions == "Poisson Distribution":
 
 if distributions == "Geometric Distribution":
     streamlit.title("Geometric Distribution")
-    probability = streamlit.sidebar.number_input("Insert the probability",format="%f" , step=0.001, min_value=0.0, max_value=1.0)
+    probability = streamlit.sidebar.number_input("Insert the probability",format="%f" , step=0.01, min_value=0.0, max_value=1.0)
     # k = streamlit.sidebar.number_input("Insert the value of K", step=1.0, min_value=0.0)
     if probability:
         geom_dist(probability)
 
 if distributions == "Binomial Distribution":
     streamlit.title("Binomial Distribution")
-    probability = streamlit.sidebar.number_input("Insert the probability", format="%f" , step=0.001, min_value=0.0, max_value=1.0)
+    probability = streamlit.sidebar.number_input("Insert the probability", format="%f" , step=0.01, min_value=0.0, max_value=1.0)
     trials = streamlit.sidebar.number_input("Insert the number of trials", step=1.0, min_value=0.0)
     if probability:
         binomial_dist(probability, trials)
